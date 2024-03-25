@@ -33,20 +33,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="container">
-        <h1 className={inter.className}>NextJS OpenAI Boilerplate</h1>
+        <h1 className={inter.className}>Travel Itinerary Planner App</h1>
         <p className={inter.className}>
           {" "}
-          Test this boilerplate: Enter an animal and it will generate a pet name
-          for you.
+          The Travel Itinerary Planner App generates personalized itineraries based on users' destinations, interests, and dates, offering curated suggestions for sights, dining, accommodations, and activities to match individual travel preferences.
         </p>
         <form>
-          <ResponseDisplay data={data} error={error} loading={loading} />
           <TextInput
             value={inputValue}
             onChange={handleInputChange}
-            placeholder={"Enter an animal"}
+            placeholder={"Enter an destination"}
           />
           <SubmitButton onClick={handleSubmit} disabled={loading} />
+
+          <ResponseDisplay data={data} error={error} loading={loading} />
         </form>
       </main>
     </>
